@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Baitaplab">
 
-        <!-- Thêm đoạn này để khai báo và đặt Lab1Activity làm màn hình chạy đầu tiên -->
+
         <activity
             android:name=".Lab1Activity"
             android:exported="true">
