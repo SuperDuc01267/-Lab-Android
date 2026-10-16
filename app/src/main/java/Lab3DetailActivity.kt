@@ -71,12 +71,13 @@ fun StudentDetailScreen(student: Student, onBack: () -> Unit) {
                 .fillMaxSize()
                 .padding(paddingValues)
                 .padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            Spacer(modifier = Modifier.height(16.dp))
 
             Box(
                 modifier = Modifier
+                    .padding(top = 16.dp)
                     .size(96.dp)
                     .clip(CircleShape)
                     .background(MaterialTheme.colorScheme.primary),
@@ -89,28 +90,39 @@ fun StudentDetailScreen(student: Student, onBack: () -> Unit) {
                 )
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
 
-            Text(text = student.name, style = MaterialTheme.typography.headlineMedium)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Ngành: ${student.major}", style = MaterialTheme.typography.bodyLarge, color = Color.Gray)
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = "Email: ${student.email}", style = MaterialTheme.typography.bodyLarge)
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = "SĐT: ${student.phone}", style = MaterialTheme.typography.bodyLarge)
+            Text(
+                text = student.name,
+                style = MaterialTheme.typography.headlineMedium
+            )
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Text(
+                text = "Ngành: ${student.major}",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Gray
+            )
+
+            Text(
+                text = "Email: ${student.email}",
+                style = MaterialTheme.typography.bodyLarge
+            )
+
+            Text(
+                text = "SĐT: ${student.phone}",
+                style = MaterialTheme.typography.bodyLarge
+            )
+
 
             Button(
                 onClick = {
                     Toast.makeText(context, "Gọi điện cho ${student.phone}", Toast.LENGTH_SHORT).show()
                 },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 20.dp)
             ) {
                 Text("Gọi điện")
             }
-
-            Spacer(modifier = Modifier.height(12.dp))
 
             OutlinedButton(
                 onClick = {
