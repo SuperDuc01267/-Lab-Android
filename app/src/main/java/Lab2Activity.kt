@@ -42,7 +42,7 @@ fun StudentListScreen() {
     val context = LocalContext.current
     var searchQuery by remember { mutableStateOf("") }
 
-    // Dùng chung danh sách mẫu chuẩn từ package gốc
+
     val studentList = remember { sampleStudents }
 
     val filteredList = studentList.filter {

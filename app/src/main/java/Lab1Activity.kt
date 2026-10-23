@@ -30,7 +30,7 @@ class Lab1Activity : AppCompatActivity() {
             finish()
         }
 
-        // Kiểm tra thông tin và chuyển sang Lab2
+
         binding.btnRegister.setOnClickListener {
             val name = binding.edtName.text.toString().trim()
             val email = binding.edtEmail.text.toString().trim()
