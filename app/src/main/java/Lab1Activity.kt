@@ -25,7 +25,7 @@ class Lab1Activity : AppCompatActivity() {
         binding = ActivityLab1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Nút quay lại của Lab1
+
         binding.btnBack.setOnClickListener {
             finish()
         }
