@@ -13,7 +13,7 @@
 
 
         <activity
-            android:name=".Lab4ThemeActivity"
+            android:name=".lab6.Lab6CourseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
